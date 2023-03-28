@@ -91,20 +91,10 @@ btnEnviar.addEventListener("click", (e)=>{
     const Telefono = document.getElementById("telephone").value;
     const mensaje = document.getElementById("fm_contact").value;
 
-    //validar cadena (antiguo)
-    /* if(validateString(Nombre) && validateString(Apellido) && validateString(Telefono) && validateString(Correo)){
-        if(!isNaN(parseInt(Telefono))){
-            addStudent(Nombre,Apellido,Correo,Telefono,mensaje);
-        }else{
-            modalAlert("Error revise el numero de telefono");
-        }
-    }else{
-        modalAlert("Error en los datos");
-    } */
-
-    //si todos los valores son true devolvera un -1
+    
     if(validator.validform(objectValid)=== -1){
         addStudent(Nombre,Apellido,Correo,Telefono,mensaje);
+        console.log("enviando Formulario")
         
     }else{
         modalAlert("Error en los datos");
